@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=radio] {
+  display: none;
+}
+
+input:checked + label img {
+  border:2px solid #00f;
+}
+
+</style>
+</head>
+<body>
+
+<form id="form1">
+  <div class = "question-container">
+    <input name="image-pick" value="1" type="radio" id="one">
+    <label for="one">
+      <img src="https://www.aduis.at/Pics/ART_NR/L/604111.jpg">
+    </label>
+
+
+    <input name="image-pick" value="2" type="radio" id="two">
+    <label for="two">
+      <img src="https://www.aduis.at/Pics/ART_NR/L/604111.jpg">
+    </label>
+
+    <input name="image-pick" value="3" type="radio" id="three">
+    <label for="three">
+      <img src="https://www.aduis.at/Pics/ART_NR/L/604111.jpg">
+    </label>
+
+    <input name="image-pick" value="4"  type="radio" id="four">
+    <label for="four">
+      <img src="https://www.aduis.at/Pics/ART_NR/L/604111.jpg">
+    </label>
+  </div
+
+</form>
+<h2 id="selected"></h2>
+
+
+<script>
+document.getElementById("form1").onchange = function() {
+result = document.querySelector('input[name = "image-pick"]:checked').value;
+document.getElementById("selected").innerHTML = "Cat: " + result;
+}
+
+</script>
+</body>
+</html>
